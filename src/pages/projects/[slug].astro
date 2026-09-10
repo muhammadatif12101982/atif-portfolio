@@ -1,0 +1,105 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: {
+      slug: project.id,
+    },
+    props: {
+      project,
+    },
+  }));
+}
+
+const { project } = Astro.props;
+
+const { Content } = await render(project);
+---
+
+<BaseLayout
+  title={project.data.title}
+  description={project.data.description}
+>
+  <article>
+    <header class="border-b border-slate-800">
+      <div class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
+          {project.data.category}
+        </p>
+
+        <h1
+          class="mt-5 max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+        >
+          {project.data.title}
+        </h1>
+
+        <p class="mt-6 text-lg text-slate-400">
+          {project.data.client}
+        </p>
+
+        <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          {project.data.description}
+        </p>
+
+        {
+          project.data.metrics && (
+            <div class="mt-10 grid gap-6 sm:grid-cols-3">
+              {project.data.metrics.map((metric) => (
+                <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                  <p class="text-3xl font-bold text-white">
+                    {metric.value}
+                  </p>
+
+                  <p class="mt-1 text-sm text-slate-500">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="mx-auto grid max-w-5xl gap-12 px-6 py-16 lg:grid-cols-[1fr_280px]">
+      <div
+        class="prose prose-invert max-w-none
+        prose-headings:text-white
+        prose-p:text-slate-300
+        prose-p:leading-8
+        prose-li:text-slate-300"
+      >
+        <Content />
+      </div>
+
+      <aside>
+        <div class="sticky top-8 rounded-xl border border-slate-800 bg-slate-900/40 p-6">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400">
+            Technologies
+          </h2>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            {project.data.technologies.map((technology) => (
+              <span class="skill-tag">
+                {technology}
+              </span>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="mx-auto max-w-5xl px-6 pb-16">
+      <a
+        href="/projects"
+        class="font-semibold text-sky-400 transition hover:text-sky-300"
+      >
+        ← Back to projects
+      </a>
+    </div>
+  </article>
+</BaseLayout>

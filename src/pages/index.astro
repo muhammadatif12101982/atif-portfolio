@@ -1,17 +1,305 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Senior Software Engineer"
+  description="Muhammad Atif — Senior Software Engineer with 18+ years of experience across .NET, Microsoft 365, SharePoint, Power Platform, and AI."
+>
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:py-40">
+      <div class="max-w-4xl">
+        <p class="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
+          Senior Software Engineer
+        </p>
+
+        <h1
+          class="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl"
+        >
+          Building enterprise software,
+          <span class="text-sky-400">modern platforms</span>,
+          and AI-powered solutions.
+        </h1>
+
+        <p
+          class="mt-8 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl"
+        >
+          18+ years of experience designing and delivering enterprise solutions
+          across .NET, Microsoft 365, SharePoint, Power Platform, cloud
+          architecture, and AI-driven applications.
+        </p>
+
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/projects"
+            class="inline-flex items-center justify-center rounded-lg bg-sky-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-400"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="/ai-lab"
+            class="inline-flex items-center justify-center rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-slate-500 hover:bg-slate-900"
+          >
+            Explore AI Lab
+          </a>
+
+          <a
+            href="/resume"
+            class="inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold text-slate-300 transition hover:text-white"
+          >
+            View Resume →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="border-t border-slate-800 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
+          Engineering Capabilities
+        </p>
+
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          From enterprise platforms to intelligent applications.
+        </h2>
+
+        <p class="mt-5 text-lg leading-8 text-slate-400">
+          A combination of hands-on engineering, platform modernization,
+          solution architecture, automation, and emerging AI capabilities.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7"
+        >
+          <p class="text-sm font-semibold text-sky-400">01</p>
+
+          <h3 class="mt-4 text-xl font-semibold text-white">
+            Enterprise Engineering
+          </h3>
+
+          <p class="mt-3 leading-7 text-slate-400">
+            Designing and developing scalable enterprise applications,
+            backend services, integrations, and business solutions using
+            .NET, C#, SQL Server, REST APIs, and modern engineering practices.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">ASP.NET Core</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Microservices</span>
+          </div>
+        </article>
+
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7"
+        >
+          <p class="text-sm font-semibold text-sky-400">02</p>
+
+          <h3 class="mt-4 text-xl font-semibold text-white">
+            Microsoft 365 & Cloud
+          </h3>
+
+          <p class="mt-3 leading-7 text-slate-400">
+            Building and modernizing Microsoft 365 solutions across
+            SharePoint, Power Platform, SPFx, Microsoft Graph, Azure, and
+            enterprise collaboration environments.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="skill-tag">SharePoint</span>
+            <span class="skill-tag">SPFx</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Power Apps</span>
+            <span class="skill-tag">Power Automate</span>
+            <span class="skill-tag">Azure</span>
+          </div>
+        </article>
+
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7"
+        >
+          <p class="text-sm font-semibold text-sky-400">03</p>
+
+          <h3 class="mt-4 text-xl font-semibold text-white">
+            AI & Intelligent Automation
+          </h3>
+
+          <p class="mt-3 leading-7 text-slate-400">
+            Exploring and building AI-powered solutions using LLMs,
+            retrieval-augmented generation, intelligent knowledge systems,
+            prompt engineering, and automation.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="skill-tag">LLM Applications</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Vector Search</span>
+            <span class="skill-tag">AI Automation</span>
+          </div>
+        </article>
+
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7"
+        >
+          <p class="text-sm font-semibold text-sky-400">04</p>
+
+          <h3 class="mt-4 text-xl font-semibold text-white">
+            Architecture & Leadership
+          </h3>
+
+          <p class="mt-3 leading-7 text-slate-400">
+            Leading complex modernization initiatives, migrations,
+            architecture decisions, technical delivery, disaster recovery,
+            security, and engineering teams.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="skill-tag">Solution Architecture</span>
+            <span class="skill-tag">Migration</span>
+            <span class="skill-tag">DR</span>
+            <span class="skill-tag">Security</span>
+            <span class="skill-tag">Technical Leadership</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-6xl px-6 py-20">
+  <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
+        Selected Work
+      </p>
+
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+        Enterprise engineering with measurable outcomes
+      </h2>
+
+      <p class="mt-4 text-lg leading-8 text-slate-600">
+        Selected projects spanning large-scale SharePoint modernization,
+        Microsoft 365, business process automation, and AI engineering.
+      </p>
+    </div>
+
+    <a
+      href="/projects"
+      class="shrink-0 font-semibold text-slate-900 hover:text-slate-600"
+    >
+      View all projects →
+    </a>
+  </div>
+
+  <div class="mt-10 grid gap-8 lg:grid-cols-3">
+    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+      <p class="text-sm font-semibold text-slate-500">
+        Enterprise Migration
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold text-slate-900">
+        7TB+ SharePoint Migration & Platform Modernization
+      </h3>
+
+      <p class="mt-4 leading-7 text-slate-600">
+        Large-scale enterprise migration from SharePoint 2019 to SharePoint
+        Subscription Edition with a focus on data integrity and operational
+        continuity.
+      </p>
+
+      <div class="mt-6 flex gap-6">
+        <div>
+          <div class="text-xl font-bold text-slate-900">7TB+</div>
+          <div class="text-xs text-slate-500">Data migrated</div>
+        </div>
+
+        <div>
+          <div class="text-xl font-bold text-slate-900">99.9%</div>
+          <div class="text-xs text-slate-500">Data integrity</div>
+        </div>
+
+        <div>
+          <div class="text-xl font-bold text-slate-900">0</div>
+          <div class="text-xs text-slate-500">Downtime</div>
+        </div>
+      </div>
+
+      <a
+        href="/projects/oia-sharepoint-migration/"
+        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
+      >
+        View case study →
+      </a>
+    </article>
+
+    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+      <p class="text-sm font-semibold text-slate-500">
+        Microsoft 365 Modernization
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold text-slate-900">
+        SharePoint & Microsoft 365 Modernization
+      </h3>
+
+      <p class="mt-4 leading-7 text-slate-600">
+        Modernization of enterprise SharePoint solutions using SharePoint
+        Online, SPFx, React, Power Apps, and Power Automate.
+      </p>
+
+      <div class="mt-6 flex gap-6">
+        <div>
+          <div class="text-xl font-bold text-slate-900">15+</div>
+          <div class="text-xs text-slate-500">Apps & workflows</div>
+        </div>
+
+        <div>
+          <div class="text-xl font-bold text-slate-900">30%</div>
+          <div class="text-xs text-slate-500">Adoption increase</div>
+        </div>
+      </div>
+
+      <a
+        href="/projects/bank-dhofar-modernization/"
+        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
+      >
+        View case study →
+      </a>
+    </article>
+
+    <article class="rounded-2xl border border-slate-300 bg-slate-50 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+      <p class="text-sm font-semibold text-slate-500">
+        AI Engineering
+      </p>
+
+      <h3 class="mt-3 text-2xl font-bold text-slate-900">
+        Enterprise Knowledge Assistant
+      </h3>
+
+      <p class="mt-4 leading-7 text-slate-600">
+        AI-powered knowledge assistant combining RAG, LLMs, vector search,
+        semantic retrieval, and prompt engineering.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">LLMs</span>
+        <span class="skill-tag">Vector Search</span>
+        <span class="skill-tag">Python</span>
+      </div>
+
+      <a
+        href="/ai-lab/"
+        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
+      >
+        Explore AI Lab →
+      </a>
+    </article>
+  </div>
+</section>
+</BaseLayout>

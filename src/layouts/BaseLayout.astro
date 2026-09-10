@@ -1,0 +1,144 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Muhammad Atif — Senior Software Engineer specializing in .NET, Microsoft 365, SharePoint, Power Platform, and AI.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title} | Muhammad Atif</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <header class="border-b border-slate-200 bg-white">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <a
+      href="/"
+      class="text-lg font-bold tracking-tight text-slate-900"
+    >
+      Muhammad Atif
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about/" class="nav-link">About</a>
+      <a href="/experience/" class="nav-link">Experience</a>
+      <a href="/projects/" class="nav-link">Projects</a>
+      <a href="/ai-lab/" class="nav-link">AI Lab</a>
+      <a href="/articles/" class="nav-link">Articles</a>
+      <a href="/resume/" class="nav-link">Resume</a>
+      <a href="/contact/" class="nav-link">Contact</a>
+    </nav>
+
+    <button
+      id="mobile-menu-button"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      class="rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-slate-100 bg-white md:hidden"
+  >
+    <nav class="mx-auto flex max-w-7xl flex-col px-6 py-4 text-sm font-medium">
+      <a href="/" class="border-b border-slate-100 py-3">Home</a>
+      <a href="/about/" class="border-b border-slate-100 py-3">About</a>
+      <a href="/experience/" class="border-b border-slate-100 py-3">Experience</a>
+      <a href="/projects/" class="border-b border-slate-100 py-3">Projects</a>
+      <a href="/ai-lab/" class="border-b border-slate-100 py-3">AI Lab</a>
+      <a href="/articles/" class="border-b border-slate-100 py-3">Articles</a>
+      <a href="/resume/" class="border-b border-slate-100 py-3">Resume</a>
+      <a href="/contact/" class="py-3">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const button = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  button?.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    menu?.classList.toggle("hidden");
+  });
+</script>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+  <div
+    class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between"
+  >
+    <div>
+      <p class="font-medium text-slate-700">
+        Muhammad Atif
+      </p>
+      <p class="mt-1">
+        Senior Software Engineer · Enterprise Platforms · AI Engineering
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-5">
+      <a href="/projects/" class="transition hover:text-slate-900">
+        Projects
+      </a>
+
+      <a href="/ai-lab/" class="transition hover:text-slate-900">
+        AI Lab
+      </a>
+
+      <a href="/resume/" class="transition hover:text-slate-900">
+        Resume
+      </a>
+
+      <a href="/contact/" class="transition hover:text-slate-900">
+        Contact
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-slate-100">
+    <div class="mx-auto max-w-7xl px-6 py-4 text-xs text-slate-400">
+      © {new Date().getFullYear()} Muhammad Atif. Built with Astro.
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
