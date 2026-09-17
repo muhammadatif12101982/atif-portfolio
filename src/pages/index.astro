@@ -54,7 +54,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
-    <section class="border-t border-slate-800 bg-slate-900/40">
+
+  <section class="border-t border-slate-800 bg-slate-900/40">
     <div class="mx-auto max-w-6xl px-6 py-20 sm:py-24">
       <div class="max-w-2xl">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-400">
@@ -172,134 +173,143 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
-  <section class="mx-auto max-w-6xl px-6 py-20">
-  <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-    <div class="max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
-        Selected Work
-      </p>
 
-      <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-        Enterprise engineering with measurable outcomes
-      </h2>
+  <section class="border-t border-slate-800">
+    <div class="mx-auto max-w-6xl px-6 py-20">
+      <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-sky-400">
+            Selected Work
+          </p>
 
-      <p class="mt-4 text-lg leading-8 text-slate-600">
-        Selected projects spanning large-scale SharePoint modernization,
-        Microsoft 365, business process automation, and AI engineering.
-      </p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            Enterprise engineering with measurable outcomes
+          </h2>
+
+          <p class="mt-4 text-lg leading-8 text-slate-400">
+            Selected projects spanning large-scale SharePoint modernization,
+            Microsoft 365, business process automation, and AI engineering.
+          </p>
+        </div>
+
+        <a
+          href="/projects"
+          class="shrink-0 font-semibold text-slate-300 transition hover:text-white"
+        >
+          View all projects →
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-8 lg:grid-cols-3">
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-700 hover:shadow-md"
+        >
+          <p class="text-sm font-semibold text-slate-400">
+            Enterprise Migration
+          </p>
+
+          <h3 class="mt-3 text-2xl font-bold text-white">
+            7TB+ SharePoint Migration & Platform Modernization
+          </h3>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            Large-scale enterprise migration from SharePoint 2019 to
+            SharePoint Subscription Edition with a focus on data integrity and
+            operational continuity.
+          </p>
+
+          <div class="mt-6 flex gap-6">
+            <div>
+              <div class="text-xl font-bold text-white">7TB+</div>
+              <div class="text-xs text-slate-500">Data migrated</div>
+            </div>
+
+            <div>
+              <div class="text-xl font-bold text-white">99.9%</div>
+              <div class="text-xs text-slate-500">Data integrity</div>
+            </div>
+
+            <div>
+              <div class="text-xl font-bold text-white">0</div>
+              <div class="text-xs text-slate-500">Downtime</div>
+            </div>
+          </div>
+
+          <a
+            href="/projects/oia-sharepoint-migration/"
+            class="mt-7 inline-flex font-semibold text-sky-400 transition hover:text-sky-300"
+          >
+            View case study →
+          </a>
+        </article>
+
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-700 hover:shadow-md"
+        >
+          <p class="text-sm font-semibold text-slate-400">
+            Microsoft 365 Modernization
+          </p>
+
+          <h3 class="mt-3 text-2xl font-bold text-white">
+            SharePoint & Microsoft 365 Modernization
+          </h3>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            Modernization of enterprise SharePoint solutions using SharePoint
+            Online, SPFx, React, Power Apps, and Power Automate.
+          </p>
+
+          <div class="mt-6 flex gap-6">
+            <div>
+              <div class="text-xl font-bold text-white">15+</div>
+              <div class="text-xs text-slate-500">Apps & workflows</div>
+            </div>
+
+            <div>
+              <div class="text-xl font-bold text-white">30%</div>
+              <div class="text-xs text-slate-500">Adoption increase</div>
+            </div>
+          </div>
+
+          <a
+            href="/projects/bank-dhofar-modernization/"
+            class="mt-7 inline-flex font-semibold text-sky-400 transition hover:text-sky-300"
+          >
+            View case study →
+          </a>
+        </article>
+
+        <article
+          class="rounded-2xl border border-slate-800 bg-slate-950 p-7 shadow-sm transition hover:-translate-y-1 hover:border-slate-700 hover:shadow-md"
+        >
+          <p class="text-sm font-semibold text-slate-400">
+            AI Engineering
+          </p>
+
+          <h3 class="mt-3 text-2xl font-bold text-white">
+            Enterprise Knowledge Assistant
+          </h3>
+
+          <p class="mt-4 leading-7 text-slate-400">
+            AI-powered knowledge assistant combining RAG, LLMs, vector search,
+            semantic retrieval, and prompt engineering.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">Vector Search</span>
+            <span class="skill-tag">Python</span>
+          </div>
+
+          <a
+            href="/ai-lab/"
+            class="mt-7 inline-flex font-semibold text-sky-400 transition hover:text-sky-300"
+          >
+            Explore AI Lab →
+          </a>
+        </article>
+      </div>
     </div>
-
-    <a
-      href="/projects"
-      class="shrink-0 font-semibold text-slate-900 hover:text-slate-600"
-    >
-      View all projects →
-    </a>
-  </div>
-
-  <div class="mt-10 grid gap-8 lg:grid-cols-3">
-    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-      <p class="text-sm font-semibold text-slate-500">
-        Enterprise Migration
-      </p>
-
-      <h3 class="mt-3 text-2xl font-bold text-slate-900">
-        7TB+ SharePoint Migration & Platform Modernization
-      </h3>
-
-      <p class="mt-4 leading-7 text-slate-600">
-        Large-scale enterprise migration from SharePoint 2019 to SharePoint
-        Subscription Edition with a focus on data integrity and operational
-        continuity.
-      </p>
-
-      <div class="mt-6 flex gap-6">
-        <div>
-          <div class="text-xl font-bold text-slate-900">7TB+</div>
-          <div class="text-xs text-slate-500">Data migrated</div>
-        </div>
-
-        <div>
-          <div class="text-xl font-bold text-slate-900">99.9%</div>
-          <div class="text-xs text-slate-500">Data integrity</div>
-        </div>
-
-        <div>
-          <div class="text-xl font-bold text-slate-900">0</div>
-          <div class="text-xs text-slate-500">Downtime</div>
-        </div>
-      </div>
-
-      <a
-        href="/projects/oia-sharepoint-migration/"
-        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
-      >
-        View case study →
-      </a>
-    </article>
-
-    <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-      <p class="text-sm font-semibold text-slate-500">
-        Microsoft 365 Modernization
-      </p>
-
-      <h3 class="mt-3 text-2xl font-bold text-slate-900">
-        SharePoint & Microsoft 365 Modernization
-      </h3>
-
-      <p class="mt-4 leading-7 text-slate-600">
-        Modernization of enterprise SharePoint solutions using SharePoint
-        Online, SPFx, React, Power Apps, and Power Automate.
-      </p>
-
-      <div class="mt-6 flex gap-6">
-        <div>
-          <div class="text-xl font-bold text-slate-900">15+</div>
-          <div class="text-xs text-slate-500">Apps & workflows</div>
-        </div>
-
-        <div>
-          <div class="text-xl font-bold text-slate-900">30%</div>
-          <div class="text-xs text-slate-500">Adoption increase</div>
-        </div>
-      </div>
-
-      <a
-        href="/projects/bank-dhofar-modernization/"
-        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
-      >
-        View case study →
-      </a>
-    </article>
-
-    <article class="rounded-2xl border border-slate-300 bg-slate-50 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-      <p class="text-sm font-semibold text-slate-500">
-        AI Engineering
-      </p>
-
-      <h3 class="mt-3 text-2xl font-bold text-slate-900">
-        Enterprise Knowledge Assistant
-      </h3>
-
-      <p class="mt-4 leading-7 text-slate-600">
-        AI-powered knowledge assistant combining RAG, LLMs, vector search,
-        semantic retrieval, and prompt engineering.
-      </p>
-
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="skill-tag">RAG</span>
-        <span class="skill-tag">LLMs</span>
-        <span class="skill-tag">Vector Search</span>
-        <span class="skill-tag">Python</span>
-      </div>
-
-      <a
-        href="/ai-lab/"
-        class="mt-7 inline-flex font-semibold text-slate-900 hover:text-slate-600"
-      >
-        Explore AI Lab →
-      </a>
-    </article>
-  </div>
-</section>
+  </section>
 </BaseLayout>

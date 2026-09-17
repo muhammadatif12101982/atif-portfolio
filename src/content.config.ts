@@ -25,6 +25,20 @@ const projects = defineCollection({
   }),
 });
 
+const articles = defineCollection({
+  loader: glob({
+    pattern: "**/*.{md,mdx}",
+    base: "./src/content/articles",
+  }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishedDate: z.coerce.date(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
 export const collections = {
   projects,
+  articles,
 };
