@@ -45,6 +45,35 @@ const pageTitle = title;
     <meta name="twitter:image:alt" content="Muhammad Atif — Senior Software Engineer" />
 
     <title>{pageTitle}</title>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Muhammad Atif",
+  url: siteUrl,
+  jobTitle: "Senior Software Engineer",
+  description,
+  sameAs: [
+    "https://www.linkedin.com/in/mhatif",
+    "https://github.com/muhammadatif12101982"
+  ],
+  knowsAbout: [
+    ".NET",
+    "C#",
+    "ASP.NET Core",
+    "Microsoft 365",
+    "SharePoint",
+    "SharePoint Online",
+    "SPFx",
+    "Power Platform",
+    "Power Apps",
+    "Power Automate",
+    "Azure",
+    "Artificial Intelligence",
+    "Large Language Models",
+    "Retrieval-Augmented Generation"
+  ]
+})}></script>
   </head>
 
   <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
